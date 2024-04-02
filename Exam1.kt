@@ -1,16 +1,18 @@
-var name:String = "Kotlin"
-val age:Int = 20
-
-lateinit var dept:String
-val deptLength:Int by lazy{
-    dept.length
-}
+package chapter2
 
 fun main() {
-    println("이름 : $name")
-    println("나이 : ${age + 1}")
+    val a = readln().toInt()
+    val b = readln().toInt()
 
-    dept = "컴퓨터공학"
-    println("학과=${dept}")
-    println("학과명 길이 = ${deptLength}")
+    val c = if(a>b) a else b
+
+    val d = if(a<b){
+                println(b)
+                b
+            }else {
+                println(a)
+                a
+            }
+    println(c)
+    println(d)
 }
