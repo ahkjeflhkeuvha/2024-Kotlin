@@ -1,15 +1,28 @@
+package chapter2
+
 fun main() {
-    var str1:String? = "Hello Kotlin"
-    str1 = null
+    var x = 0
+    var sum = 0
+    while(x < 10) {
+        sum += ++x
+    }
+    println(sum)
 
-    println("str1 = ${str1}")
 
-    var str2:String = "Kotlin"
+    x = 0
+    sum = 0
 
-    println(str2)
-    println("str2 = $str2, length = ${str2?.length}")
-    println("str2 = $str2, length = ${str2?.length?:0}")
-    // str2? -> str2가 null이 가능? ?: null이 아니면 length, null이면 0
-    println("str2 = $str2, length = ${str2!!.length}")
+    while(true) {
+        sum += ++x
+        if (x == 10) break
+    }
+    println(sum)
 
+    x = 0
+    sum = 0
+    do {
+        sum += ++x
+        if(x == 10) break
+    } while(true)
+    println(sum)
 }
