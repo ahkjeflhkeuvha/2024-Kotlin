@@ -1,14 +1,22 @@
-fun main() {
-    var str1:String = "hello"
-    var str2 = "World"
-    var str3 = "hello"
+package chapter2
 
-    println("str1 === str2 : ${str1 === str2}")
-    println("str1 === str3 : ${str1 === str3}")
+fun sayHello(name:String) = println("hello $name")
 
-    var str4 = String(charArrayOf('h', 'e', 'l', 'l', 'o'))
-    println("str1 === str4 : ${str1 === str4}")
-    println("str1 == str4 : ${str1 == str4}")
+fun sayHello1(name:String?){
+    if(name == null) println("Hello Korea")
+    else println("Hello ${name}")
+}
 
+fun sayHello2(name:String = "Korea") = println("Hello $name")
 
+fun sayHello3(no:Int, name:String = "Korea") = println("Hello $name")
+
+fun main(){
+    sayHello("Jieun")
+    sayHello1(null)
+    sayHello2()
+    sayHello2("Kim")
+    sayHello3(5)
+    sayHello3(no=10)
+    sayHello3(no = 10, name = "Kim")
 }
